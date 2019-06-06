@@ -12,6 +12,13 @@
 		35B91F8B22A983A500B53A1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B91F8922A983A500B53A1C /* Main.storyboard */; };
 		35B91F8D22A983A700B53A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B91F8C22A983A700B53A1C /* Assets.xcassets */; };
 		35B91F9022A983A700B53A1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B91F8E22A983A700B53A1C /* LaunchScreen.storyboard */; };
+		35B91F9E22A9840900B53A1C /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91F9922A9840900B53A1C /* StorageHandler.swift */; };
+		35B91FA122A9840900B53A1C /* JWTHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91F9C22A9840900B53A1C /* JWTHandler.swift */; };
+		35B91FAB22A9847700B53A1C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91FA922A9847700B53A1C /* NetworkClient.swift */; };
+		35B91FAC22A9847700B53A1C /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91FAA22A9847700B53A1C /* APIList.swift */; };
+		35B91FB322A98AB300B53A1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91FAE22A98AB300B53A1C /* Constants.swift */; };
+		35B91FB422A98AB300B53A1C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91FAF22A98AB300B53A1C /* Enums.swift */; };
+		35B91FB522A98AB300B53A1C /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B91FB022A98AB300B53A1C /* Structs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +28,14 @@
 		35B91F8A22A983A500B53A1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35B91F8C22A983A700B53A1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35B91F8F22A983A700B53A1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		35B91F9122A983A700B53A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B91F9922A9840900B53A1C /* StorageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
+		35B91F9C22A9840900B53A1C /* JWTHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTHandler.swift; sourceTree = "<group>"; };
+		35B91FA922A9847700B53A1C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		35B91FAA22A9847700B53A1C /* APIList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIList.swift; sourceTree = "<group>"; };
+		35B91FAE22A98AB300B53A1C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35B91FAF22A98AB300B53A1C /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		35B91FB022A98AB300B53A1C /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		35B91FB222A98AB300B53A1C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,52 @@
 			isa = PBXGroup;
 			children = (
 				35B91F8522A983A500B53A1C /* AppDelegate.swift */,
+				35B91F9722A983BD00B53A1C /* View */,
 				35B91F8722A983A500B53A1C /* ViewController.swift */,
+				35B91F9C22A9840900B53A1C /* JWTHandler.swift */,
+				35B91F9922A9840900B53A1C /* StorageHandler.swift */,
+				35B91FA822A9847700B53A1C /* NetworkHandler */,
+				35B91FAD22A98AB300B53A1C /* Helpers */,
+				35B91FB122A98AB300B53A1C /* Supporting Files */,
+			);
+			path = Mock_JWT;
+			sourceTree = "<group>";
+		};
+		35B91F9722A983BD00B53A1C /* View */ = {
+			isa = PBXGroup;
+			children = (
 				35B91F8922A983A500B53A1C /* Main.storyboard */,
 				35B91F8C22A983A700B53A1C /* Assets.xcassets */,
 				35B91F8E22A983A700B53A1C /* LaunchScreen.storyboard */,
-				35B91F9122A983A700B53A1C /* Info.plist */,
 			);
-			path = Mock_JWT;
+			path = View;
+			sourceTree = "<group>";
+		};
+		35B91FA822A9847700B53A1C /* NetworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				35B91FA922A9847700B53A1C /* NetworkClient.swift */,
+				35B91FAA22A9847700B53A1C /* APIList.swift */,
+			);
+			path = NetworkHandler;
+			sourceTree = "<group>";
+		};
+		35B91FAD22A98AB300B53A1C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35B91FAE22A98AB300B53A1C /* Constants.swift */,
+				35B91FAF22A98AB300B53A1C /* Enums.swift */,
+				35B91FB022A98AB300B53A1C /* Structs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		35B91FB122A98AB300B53A1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35B91FB222A98AB300B53A1C /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B91FB522A98AB300B53A1C /* Structs.swift in Sources */,
+				35B91FA122A9840900B53A1C /* JWTHandler.swift in Sources */,
 				35B91F8822A983A500B53A1C /* ViewController.swift in Sources */,
+				35B91FAC22A9847700B53A1C /* APIList.swift in Sources */,
+				35B91F9E22A9840900B53A1C /* StorageHandler.swift in Sources */,
+				35B91FB322A98AB300B53A1C /* Constants.swift in Sources */,
 				35B91F8622A983A500B53A1C /* AppDelegate.swift in Sources */,
+				35B91FB422A98AB300B53A1C /* Enums.swift in Sources */,
+				35B91FAB22A9847700B53A1C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P72Y94UW2W;
-				INFOPLIST_FILE = Mock_JWT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Mock_JWT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P72Y94UW2W;
-				INFOPLIST_FILE = Mock_JWT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Mock_JWT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
